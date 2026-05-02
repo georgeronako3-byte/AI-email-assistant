@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Email Assistant</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="app-container">
+
+  <!-- HEADER -->
+  <h1>AI Email Assistant</h1>
+
+  <!-- EMAIL INPUT -->
+  <textarea id="emailInput" placeholder="Paste email here..." rows="8"></textarea>
+
+  <!-- TONE -->
+  <select id="toneSelect">
+    <option value="Friendly">Friendly</option>
+    <option value="Professional" selected>Professional</option>
+    <option value="Short">Short</option>
+  </select>
+
+  <!-- GENERATE -->
+  <button id="generateBtn">Generate Reply</button>
+
+  <!-- TYPING INDICATOR -->
+  <div id="typingIndicator" class="hidden">
+    AI is typing<span class="dots">...</span>
+  </div>
+
+  <!-- OUTPUT BOX -->
+  <textarea id="replyOutput" placeholder="Reply will appear here..." rows="8" readonly></textarea>
+
+  <!-- COPY -->
+  <button id="copyBtn">Copy</button>
+
+  <hr />
+
+  <!-- BUSINESS INFO -->
+  <h3>Business Info</h3>
+
+  <input id="shopName" placeholder="Shop Name" />
+
+  <select id="businessCategory">
+    <option value="home_decor">Home Decor</option>
+    <option value="jewelry">Jewelry</option>
+    <option value="clothing">Clothing</option>
+    <option value="electronics">Electronics</option>
+    <option value="beauty">Beauty</option>
+    <option value="food">Food</option>
+    <option value="toys">Toys</option>
+    <option value="sports">Sports</option>
+    <option value="other">Other</option>
+  </select>
+
+  <input id="businessHours" placeholder="Business Hours (e.g. Mon–Fri 9am–5pm)" />
+
+  <textarea id="policies" placeholder="Store policies (returns, refunds, shipping)"></textarea>
+
+  <textarea id="extraInfo" placeholder="Extra business info (tone, style, etc.)"></textarea>
+
+  <textarea id="products" placeholder="What do you sell?"></textarea>
+
+  <button onclick="saveInfo()">Save Business Info</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
