@@ -1,0 +1,245 @@
+/* Base styling for whole app */
+body {
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+/* Center container */
+.app-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Inputs and textareas */
+textarea, input, select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/* ===== THEME VARIABLES ===== */
+:root {
+  --bg: #f0f4f8;
+  --text: #111;
+}
+
+/* Dark mode */
+html[data-theme="dark"] {
+  --bg: #111827;
+  --text: #0f0f10;
+}
+
+/* Vivid mode */
+html[data-theme="vivid"] {
+  --bg: #fff3e6;
+  --text: #1f2937;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* Main container */
+.app-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Glass card style */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Inputs */
+textarea, input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/* Primary button */
+#generateBtn {
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  color: rgb(255, 255, 255);
+}
+
+#generateBtn:hover {
+  transform: scale(1.03);
+}
+
+/* Copy button */
+#copyBtn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+#copyBtn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Output box */
+#replyOutput {
+  min-height: 150px;
+  background: rgba(255,255,255,0.05);
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+/* Main layout */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT PANEL */
+.sidebar {
+  width: 320px;
+  padding: 20px;
+  background: #111827;
+  border-right: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar h2 {
+  margin: 0;
+}
+
+textarea, input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1f2937;
+  color: white;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* RIGHT PANEL (Chat area) */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Chat header */
+.chat-header {
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Message bubble */
+.message {
+  padding: 16px;
+  border-radius: 12px;
+  max-width: 80%;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Bot message */
+.bot {
+  background: #1f2937;
+  align-self: flex-start;
+}
+
+/* Copy button */
+.copyBtn {
+  margin-top: 10px;
+  background: #10b981;
+}
+
+.copyBtn:hover {
+  background: #059669;
+}
+
+/* Ai typing indicator */.typing {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* hidden state */
+.hidden {
+  display: none;
+}
+
+/* animated dots */
+.dots::after {
+  content: "";
+  animation: dots 0.8s infinite;
+}
+
+@keyframes dots {
+  0% { content: ""; }
+  33% { content: "."; }
+  66% { content: ".."; }
+  100% { content: "..."; }
+}
