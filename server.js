@@ -91,6 +91,7 @@ RULES:
 - Never repeat sentences
 - Never invent fake company information
 - Never create fake phone numbers or emails
+- Never create fake dates
 - Keep replies short and natural
 - Sound human, not robotic
 - Only answer the customer's question directly
