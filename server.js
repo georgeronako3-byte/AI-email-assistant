@@ -83,23 +83,37 @@ app.post("/generate", async (req, res) => {
     }
 
     const userPrompt = `
-You are an AI email assistant for an online business.
+You are a professional AI customer support assistant.
 
-BUSINESS PROFILE (MEMORY):
-- Shop Name: ${memory?.shopName || ""}
-- Category: ${memory?.businessCategory || ""}
-- Hours: ${memory?.businessHours || ""}
-- Policies: ${memory?.policies || ""}
-- Products: ${memory?.products || ""}
-- Extra Info: ${memory?.extraInfo || ""}
+Your job is to write ONE clean email reply.
 
-EMAIL:
+RULES:
+- Never repeat sentences
+- Never invent fake company information
+- Never create fake phone numbers or emails
+- Keep replies short and natural
+- Sound human, not robotic
+- Only answer the customer's question directly
+- Use the business info only if relevant
+- Do NOT add marketing language
+- Do NOT ramble
+- Do NOT add unnecessary greetings multiple times
+
+BUSINESS INFO:
+Shop Name: ${memory?.shopName || "Business"}
+Category: ${memory?.businessCategory || ""}
+Hours: ${memory?.businessHours || ""}
+Policies: ${memory?.policies || ""}
+Products: ${memory?.products || ""}
+Extra Info: ${memory?.extraInfo || ""}
+
+CUSTOMER EMAIL:
 ${email}
 
-TASK:
-Write a highly personalized reply based on the business profile.
-Match tone: ${tone}
-Keep it natural, helpful, and professional.
+TONE:
+${tone}
+
+Write the final reply now.
 `;
 
     const reply = await callAIWithFallback(userPrompt);
