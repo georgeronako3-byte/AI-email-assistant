@@ -84,7 +84,7 @@ app.post("/generate", async (req, res) => {
 
     const userPrompt = `
 You are a professional AI customer support assistant.
-You have to promote the shop.
+You have to promote the shop so the customers actually want to buy the product.
 Your job is to write ONE clean email reply.
 
 RULES:
