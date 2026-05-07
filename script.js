@@ -1,5 +1,3 @@
-console.log('yay');
-
 // ================================
 // 🧠 BUSINESS AI MEMORY SYSTEM
 // ================================
@@ -61,7 +59,7 @@ generateBtn.addEventListener("click", async () => {
     replyOutput.value = "Please paste an email first.";
     return;
   }
-
+  clearTimeout(typingTimeout);
   generateBtn.disabled = true;
   replyOutput.value = "AI is thinking...";
 
@@ -82,27 +80,34 @@ copyBtn.addEventListener("click", async () => {
 
   await navigator.clipboard.writeText(text);
   copyBtn.textContent = "Copied!";
-
   setTimeout(() => {
     copyBtn.textContent = "Copy";
   }, 1500);
 });
 
 // ===== TYPING ANIMATION =====
+let typingTimeout;
+
 function typeText(element, text) {
+  clearTimeout(typingTimeout);
+
   let i = 0;
   element.value = "";
 
   function type() {
     if (i < text.length) {
-      element.value += text[i];
+      element.value += text.charAt(i);
       i++;
-      setTimeout(type, 10);
+
+      typingTimeout = setTimeout(type, 10);
     }
   }
 
   type();
 }
+
+  type();
+
 
 // ===== SAVE INFO =====
 function saveInfo() {
